@@ -36,8 +36,7 @@ def train(models, loss_fn, optimizers, loaders, args):
     '''
 
     # define kernel for prior convolution
-    conv = convolutions.clean_conv.to(args.device)
-    #conv = convolutions.gaussconv_5.to(args.device)
+    conv = convolutions.gaussconv_5.to(args.device)
     
     # unpack tuples
     model, discriminator        = models
@@ -367,8 +366,6 @@ def main():
         args.hidden,
         args.channels,
         conservative    = args.conservative)
-    #model = KMCGeneratorFlux(args.noise_shape, args.hidden, args.channels)
-    #model.symmetrize()
 
     if args.greedy_mode:
         container = KMCGeneratorContainer() # initialize an empty container
