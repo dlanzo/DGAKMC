@@ -1,0 +1,11 @@
+out/*
+models/*
+data/*
+train_logs/*
+*__pycache__*
+*.sh
+
+!out/.keepme
+!models/.keepme
+!data/.keepme
+!train_logs/.keepme
